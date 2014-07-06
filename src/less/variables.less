@@ -1,22 +1,22 @@
 // Single primary color that all mixins use. Str8 ballin.
-@primary:        hsla(26, 55%, 36%, 1);
+@primary:        hsla(28, 28%, 22%, 1); // Dark brown
  
 // Primary Variants -
-@primaryLight:   hsl(hue(@primary), 100%, 70%);
+@primaryLight:   hsl(hue(@primary), 100%, 70%); // More of an orange
 @primaryDark:    hsl(hue(@primary), 60%, 40%);
 @primaryFaded:   hsl(hue(@primary), 60%, 65%);
  
 // 180degree Variants
-@variant:         spin((@primary), 180);
-@variantLight:    hsl(hue(@variant), 100%, 70%);
-@variantDark:     hsl(hue(@variant), 60%, 40%);
-@variantFaded:    hsl(hue(@variant), 60%, 65%);
+@variant:         spin((@primary), 180); // darkish turquoise
+@variantLight:    hsl(hue(@variant), 100%, 70%); // light blue
+@variantDark:     hsl(hue(@variant), 60%, 40%); // darker turq
+@variantFaded:    hsl(hue(@variant), 60%, 65%); // lightest baby blue
  
 // 90degree Variants
-@corner:         spin((@primary), 70);
-@cornerLight:    hsl(hue(@corner), 100%, 70%);
-@cornerDark:     hsl(hue(@corner), 60%, 40%);
-@cornerFaded:    hsl(hue(@corner), 60%, 65%);
+@corner:         spin((@primary), 70); // forest swamp green
+@cornerLight:    hsl(hue(@corner), 100%, 70%); // hot neon green
+@cornerDark:     hsl(hue(@corner), 60%, 40%); // normal green
+@cornerFaded:    hsl(hue(@corner), 60%, 65%); // light green
 
 // Device widths
 @tabletWidth: 768px;

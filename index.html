@@ -5,42 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>The Fellowship Society</title>
-   	<link rel="stylesheet" href="css/styles.css"/>
    	<link rel="stylesheet" href="css/jquery.bxslider.css"/>
+   	<link rel="stylesheet" href="css/styles.css"/>
 </head>
 <body>
 	<header>
 		<div class="titlebar">
-			<div class="titlebar-left">
-				<h4>The Fellowship Society</h4>
-			</div>
-			<div class="titlebar-right">
-				<button class="member-login">Member Login</button>
+			<div class="container">
+				<div class="titlebar-left">
+					<h4>The Fellowship Society</h4>
+				</div>
+				<div class="titlebar-right">
+					<button class="member-login">Member Login</button>
+				</div>
 			</div>
 		</div>
-		<div class="main-title">
-			<h1><small>The</small><br>Fellowship Society</h1>
+		<div class="container">
+			<div class="main-title">
+				<h1><small>The</small><br>Fellowship Society</h1>
+			</div>
+			<div class="clearfix"></div>
+			<nav>
+				<ul class="top-nav">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Events</a></li>
+					<li><a href="#">Contact Us</a></li>
+				</ul>
+			</nav>
 		</div>
-		<nav>
-			<ul class="top-nav">
-				<li><a href="#">Home</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">Events</a></li>
-				<li><a href="#">Contact Us</a></li>
-			</ul>
-		</nav>
 	</header>
-	<ul class="bxslider">
-		<li><img src="images/slider1.jpg" /></li>
-		<li><img src="images/slider2.jpg" /></li>
-		<li><img src="images/slider3.jpg" /></li>
-		<li><img src="images/slider4.jpg" /></li>
-	</ul>
-	<h2>Welcome.</h2>
-	<p>Founded in 1762, the Fellowship Society is a benevolent organization dedicated to charitable works and the betterment of the greater Charleston area.
+	<div class="container">
+		<ul class="bxslider" data-call="bxslider" data-options="autoReload: true, auto: true, autoControls: true, mode: 'fade'">
+			<li><img src="images/slider1.jpg" /></li>
+			<li><img src="images/slider2.jpg" /></li>
+			<li><img src="images/slider3.jpg" /></li>
+			<li><img src="images/slider4.jpg" /></li>
+		</ul>
+		<article class="frontpage">
+			<h2>Welcome.</h2>
+			<p>Founded in 1762, the Fellowship Society is a benevolent organization dedicated to charitable works and the betterment of the greater Charleston area.</p>
+		</article>
+	
+	<footer>
+	
+	</footer>
+	</div> <!-- end of container -->
 	<script src="js/jquery-2.1.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.bxslider.min.js"></script>
+    <script src="js/jquery.bxslider-rahisified.js"></script>
     <script src="js/site.js"></script>
 </body>
 </html>
