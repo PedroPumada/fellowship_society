@@ -5921,6 +5921,8 @@ button.close {
 .modal-footer:after,
 .titlebar:before,
 .titlebar:after,
+.titlebar:before,
+.titlebar:after,
 .main-title:before,
 .main-title:after,
 nav:before,
@@ -5945,6 +5947,7 @@ nav .top-nav:after {
 .pager:after,
 .panel-body:after,
 .modal-footer:after,
+.titlebar:after,
 .titlebar:after,
 .main-title:after,
 nav:after,
@@ -7774,40 +7777,135 @@ nav .top-nav:after {
 .titlebar {
   margin-left: -15px;
   margin-right: -15px;
-  background-color: #8e5529;
+  position: relative;
+  min-height: 50px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  background-color: #222222;
+  border-color: #080808;
+  background-color: #483728;
+}
+@media (min-width: 768px) {
+  .titlebar {
+    border-radius: 4px;
+  }
+}
+.titlebar .navbar-brand {
+  color: #777777;
+}
+.titlebar .navbar-brand:hover,
+.titlebar .navbar-brand:focus {
+  color: #ffffff;
+  background-color: transparent;
+}
+.titlebar .navbar-text {
+  color: #777777;
+}
+.titlebar .navbar-nav > li > a {
+  color: #777777;
+}
+.titlebar .navbar-nav > li > a:hover,
+.titlebar .navbar-nav > li > a:focus {
+  color: #ffffff;
+  background-color: transparent;
+}
+.titlebar .navbar-nav > .active > a,
+.titlebar .navbar-nav > .active > a:hover,
+.titlebar .navbar-nav > .active > a:focus {
+  color: #ffffff;
+  background-color: #080808;
+}
+.titlebar .navbar-nav > .disabled > a,
+.titlebar .navbar-nav > .disabled > a:hover,
+.titlebar .navbar-nav > .disabled > a:focus {
+  color: #444444;
+  background-color: transparent;
+}
+.titlebar .navbar-toggle {
+  border-color: #333333;
+}
+.titlebar .navbar-toggle:hover,
+.titlebar .navbar-toggle:focus {
+  background-color: #333333;
+}
+.titlebar .navbar-toggle .icon-bar {
+  background-color: #ffffff;
+}
+.titlebar .navbar-collapse,
+.titlebar .navbar-form {
+  border-color: #101010;
+}
+.titlebar .navbar-nav > .open > a,
+.titlebar .navbar-nav > .open > a:hover,
+.titlebar .navbar-nav > .open > a:focus {
+  background-color: #080808;
+  color: #ffffff;
+}
+@media (max-width: 767px) {
+  .titlebar .navbar-nav .open .dropdown-menu > .dropdown-header {
+    border-color: #080808;
+  }
+  .titlebar .navbar-nav .open .dropdown-menu .divider {
+    background-color: #080808;
+  }
+  .titlebar .navbar-nav .open .dropdown-menu > li > a {
+    color: #777777;
+  }
+  .titlebar .navbar-nav .open .dropdown-menu > li > a:hover,
+  .titlebar .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #ffffff;
+    background-color: transparent;
+  }
+  .titlebar .navbar-nav .open .dropdown-menu > .active > a,
+  .titlebar .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .titlebar .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #ffffff;
+    background-color: #080808;
+  }
+  .titlebar .navbar-nav .open .dropdown-menu > .disabled > a,
+  .titlebar .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+  .titlebar .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+    color: #444444;
+    background-color: transparent;
+  }
+}
+.titlebar .navbar-link {
+  color: #777777;
+}
+.titlebar .navbar-link:hover {
+  color: #ffffff;
+}
+.titlebar .btn-link {
+  color: #777777;
+}
+.titlebar .btn-link:hover,
+.titlebar .btn-link:focus {
+  color: #ffffff;
+}
+.titlebar .btn-link[disabled]:hover,
+fieldset[disabled] .titlebar .btn-link:hover,
+.titlebar .btn-link[disabled]:focus,
+fieldset[disabled] .titlebar .btn-link:focus {
+  color: #444444;
 }
 .titlebar .titlebar-left {
   position: relative;
+  float: left;
+  width: 50%;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
 }
-@media (min-width: 768px) {
-  .titlebar .titlebar-left {
-    float: left;
-    width: 33.33333333%;
-  }
-}
 .titlebar .titlebar-left h4 {
-  color: #ffa866;
-  margin-left: 10px;
-}
-@media (max-width: 480px) {
-  .titlebar .titlebar-left h4 {
-    text-align: center;
-  }
+  color: #ffad66;
 }
 .titlebar .titlebar-right {
   position: relative;
+  float: left;
+  width: 50%;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-}
-@media (min-width: 768px) {
-  .titlebar .titlebar-right {
-    float: left;
-    width: 66.66666667%;
-  }
 }
 .titlebar .titlebar-right .member-login {
   display: inline-block;
@@ -7831,7 +7929,6 @@ nav .top-nav:after {
   background-color: #5cb85c;
   border-color: #4cae4c;
   margin-top: 5px;
-  margin-right: 5px;
   float: right;
 }
 .titlebar .titlebar-right .member-login:focus,
@@ -7908,17 +8005,15 @@ fieldset[disabled] .titlebar .titlebar-right .member-login.active {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  border: 4px solid blue;
-  margin-left: 0;
-  margin-right: 0;
-  display: block;
+  background-color: #dba270;
+  border-radius: 10px 10px 0 0;
 }
 .main-title h1 {
   font-family: "OldeEnglish", Georgia, Serif;
   font-size: 4em;
   text-align: center;
 }
-.main-title small {
+.main-title h1 small {
   font-family: Helvetica, Georgia, Sans-Serif;
   font-size: .5em;
 }
