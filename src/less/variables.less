@@ -1,27 +1,22 @@
 // Single primary color that all mixins use. Str8 ballin.
-@primary:        hsla(28, 28%, 22%, 1); // Dark brown
+@primary:        hsla(28, 28%, 22%, 1);
  
 // Primary Variants -
-@primaryLight:   hsl(hue(@primary), 100%, 70%); // More of an orange
+@primaryLight:   hsl(hue(@primary), 100%, 70%);
 @primaryDark:    hsl(hue(@primary), 60%, 40%);
 @primaryFaded:   hsl(hue(@primary), 60%, 65%);
  
 // 180degree Variants
-@variant:         spin((@primary), 180); // darkish turquoise
-@variantLight:    hsl(hue(@variant), 100%, 70%); // light blue
-@variantDark:     hsl(hue(@variant), 60%, 40%); // darker turq
-@variantFaded:    hsl(hue(@variant), 60%, 65%); // lightest baby blue
+@variant:         spin((@primary), 180);
+@variantLight:    hsl(hue(@variant), 100%, 70%);
+@variantDark:     hsl(hue(@variant), 60%, 40%);
+@variantFaded:    hsl(hue(@variant), 60%, 65%);
  
 // 90degree Variants
-@corner:         spin((@primary), 70); // forest swamp green
-@cornerLight:    hsl(hue(@corner), 100%, 70%); // hot neon green
-@cornerDark:     hsl(hue(@corner), 60%, 40%); // normal green
-@cornerFaded:    hsl(hue(@corner), 60%, 65%); // light green
-
-// Device widths
-@tabletWidth: 768px;
-@phoneWidth: 480px;
-@desktopWidth: 1224px;
+@corner:         spin((@primary), 70);
+@cornerLight:    hsl(hue(@corner), 100%, 70%);
+@cornerDark:     hsl(hue(@corner), 60%, 40%);
+@cornerFaded:    hsl(hue(@corner), 60%, 65%);
 
 // Background image reference:
 @background-pic: url('../images/bg/old_map.png');
