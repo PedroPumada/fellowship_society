@@ -14,7 +14,7 @@
        url('../fonts/Old_English_Regular.svg#Olde_English_Regular') format('svg'); /* Legacy iOS */
 }
 
-// Header
+// <===========HEADER=============>
 
 // Top titlebar styling
 .titlebar {
@@ -34,7 +34,14 @@
 			.btn;
 			.btn-success;
 			margin-top: 5px;
+			background-color: @cornerDark;
+			border: 0;
+			border-radius: 0;
 			float: right;
+			&:hover {
+				background-color: @cornerFaded;
+				color: @black;
+			}
 		}
 	}
 }
@@ -60,32 +67,50 @@
 
 nav {
 	.make-row();
-	border: 2px solid red;
-	margin: 0 auto;
+	.make-xs-column(12);
+//	border: 1px solid red;
 	margin-top: 10px;
-	text-align: center;
+	margin-bottom: 10px;
+	background-color: @primary;
 	.top-nav {
 		.nav;
 		.nav-pills;
-		li {
-			display: inline;
-		}
-		a {
-			display: inline-block;
+		.nav-justified;
+		li a {
+			color: @primaryLight;
+
+			&:hover {
+				color: @primary;
+				font-weight: bold;
+				background-color: @primaryFaded;
+				border-radius: 0;
+			}
 		}
 	}
 }
 
 
-// Body
-
-.bxslider {
-	margin: 0;
-	padding: 0;
-	width: 100%;
-}
-
+// <============BODY==============>
 body {
 	background-image: @background-pic;
 	background-repeat: repeat;
 }
+
+.main-content {
+/*	.make-row();*/
+/*	.make-xs-column(12);*/
+	margin-left: -15px;
+	.bxslider {
+		margin: 0;
+		padding: 0;
+		width: 100%;
+	}
+/*	.make-row();
+	.make-xs-column(12);*/
+	.home {
+		background-color: @primaryFaded;
+		padding: 10px;
+	}
+}
+
+// <============FOOTER=============>

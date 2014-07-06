@@ -1,3 +1,5 @@
+
+/*
 $(document).ready(function() {
 	$('.bxslider').bxSlider({
 		auto: true, 
@@ -5,3 +7,4 @@ $(document).ready(function() {
 		mode: 'fade'
 	});
 });
+*/

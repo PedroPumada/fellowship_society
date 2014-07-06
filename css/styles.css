@@ -7929,6 +7929,9 @@ fieldset[disabled] .titlebar .btn-link:focus {
   background-color: #5cb85c;
   border-color: #4cae4c;
   margin-top: 5px;
+  background-color: #56a329;
+  border: 0;
+  border-radius: 0;
   float: right;
 }
 .titlebar .titlebar-right .member-login:focus,
@@ -7996,6 +7999,10 @@ fieldset[disabled] .titlebar .titlebar-right .member-login.active {
   color: #5cb85c;
   background-color: #ffffff;
 }
+.titlebar .titlebar-right .member-login:hover {
+  background-color: #97db70;
+  color: #000000;
+}
 .main-title {
   margin-left: -15px;
   margin-right: -15px;
@@ -8020,15 +8027,21 @@ fieldset[disabled] .titlebar .titlebar-right .member-login.active {
 nav {
   margin-left: -15px;
   margin-right: -15px;
-  border: 2px solid red;
-  margin: 0 auto;
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin-top: 10px;
-  text-align: center;
+  margin-bottom: 10px;
+  background-color: #483728;
 }
 nav .top-nav {
   margin-bottom: 0;
   padding-left: 0;
   list-style: none;
+  width: 100%;
 }
 nav .top-nav > li {
   position: relative;
@@ -8084,18 +8097,52 @@ nav .top-nav > li.active > a:focus {
   color: #ffffff;
   background-color: #428bca;
 }
-nav .top-nav li {
-  display: inline;
+nav .top-nav > li {
+  float: none;
 }
-nav .top-nav a {
-  display: inline-block;
+nav .top-nav > li > a {
+  text-align: center;
+  margin-bottom: 5px;
 }
-.bxslider {
-  margin: 0;
-  padding: 0;
-  width: 100%;
+nav .top-nav > .dropdown .dropdown-menu {
+  top: auto;
+  left: auto;
+}
+@media (min-width: 768px) {
+  nav .top-nav > li {
+    display: table-cell;
+    width: 1%;
+  }
+  nav .top-nav > li > a {
+    margin-bottom: 0;
+  }
+}
+nav .top-nav li a {
+  color: #ffad66;
+}
+nav .top-nav li a:hover {
+  color: #483728;
+  font-weight: bold;
+  background-color: #dba270;
+  border-radius: 0;
 }
 body {
   background-image: url('../images/bg/old_map.png');
   background-repeat: repeat;
+}
+.main-content {
+  /*	.make-row();*/
+  /*	.make-xs-column(12);*/
+  margin-left: -15px;
+  /*	.make-row();
+	.make-xs-column(12);*/
+}
+.main-content .bxslider {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.main-content .home {
+  background-color: #dba270;
+  padding: 10px;
 }

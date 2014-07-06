@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>The Fellowship Society</title>
-   	<link rel="stylesheet" href="css/styles.css"/>
    	<link rel="stylesheet" href="css/jquery.bxslider.css"/>
+   	<link rel="stylesheet" href="css/styles.css"/>
 </head>
 <body>
 	<header>
@@ -22,7 +22,7 @@
 		</div>
 		<div class="container">
 			<div class="main-title">
-				<h1><small>The</small><br>Fellowship Society</h1>
+				<h1>The Fellowship Society</h1>
 			</div>
 			<div class="clearfix"></div>
 			<nav>
@@ -35,14 +35,31 @@
 			</nav>
 		</div> <!-- end container for title and nav -->
 	</header>
-	<ul class="bxslider">
-		<li><img src="images/slider1.jpg" /></li>
-		<li><img src="images/slider2.jpg" /></li>
-		<li><img src="images/slider3.jpg" /></li>
-		<li><img src="images/slider4.jpg" /></li>
-	</ul>
-	<h2>Welcome.</h2>
-	<p>Founded in 1762, the Fellowship Society is a benevolent organization dedicated to charitable works and the betterment of the greater Charleston area.
+	<div class="container">
+		<div class="main-content">
+			<ul class="bxslider" data-call="bxslider" data-options="auto: true, autoControls: true, mode: 'fade', autoReload: true">
+				<li><img src="images/slider1.jpg" /></li>
+				<li><img src="images/slider2.jpg" /></li>
+				<li><img src="images/slider3.jpg" /></li>
+				<li><img src="images/slider4.jpg" /></li>
+				</ul>
+			<article>
+				<div class="home">
+					<h2>Welcome.</h2>
+					<p>Founded in 1762, the Fellowship Society is a benevolent organization dedicated to charitable works and the betterment of the greater Charleston area.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In posuere sem dui, ut ultricies lorem luctus nec. Nunc tristique pulvinar nibh, quis semper elit vehicula eget. Phasellus facilisis malesuada justo, id molestie velit ultrices a. Ut sed ultricies lacus. Etiam hendrerit justo urna, eget malesuada nibh aliquet sit amet. Praesent vulputate vitae orci et cursus. Praesent tincidunt, velit ac rutrum fermentum, nulla leo aliquam arcu, et rhoncus ante leo eu purus. Maecenas a gravida erat. Aliquam aliquam nec ipsum et iaculis.</p>
+
+					<p>Maecenas blandit accumsan libero imperdiet tincidunt. Nulla mollis in risus non pharetra. Phasellus at commodo libero, sit amet pellentesque elit. Mauris dignissim mattis interdum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam mollis neque id quam rutrum, et adipiscing ligula rhoncus. Donec et risus sit amet arcu varius sodales quis id nunc.</p>
+
+					<h2>Ut cursus massa justo</h2>
+					<p>eget eleifend lectus venenatis non. Donec in libero mollis, malesuada erat at, bibendum velit. Nullam mauris metus, accumsan id condimentum eget, lobortis in lectus. In ullamcorper magna ut tellus mattis, at luctus diam consequat. Fusce in lectus placerat, consectetur metus sed, dictum risus. Nunc augue mauris, pharetra non risus eu, aliquam consequat sem. Praesent gravida tellus ac fermentum aliquam. Donec eget neque at urna aliquet dignissim. Nullam accumsan, magna sagittis feugiat egestas, ligula quam porttitor risus, vel facilisis dui justo non sapien.</p>
+
+					<p>Aenean vitae nulla et eros interdum tincidunt molestie ut neque. Sed pellentesque vestibulum libero. Nulla vel elit volutpat, ullamcorper leo ut, facilisis ante. Maecenas eu metus neque. Ut sapien nulla, placerat ut cursus ut, iaculis eu nibh. Morbi sit amet ligula nec risus mattis tristique. Nunc adipiscing sollicitudin erat, eu imperdiet mauris tristique at. Nam sed tincidunt est. Fusce sed laoreet arcu, vel adipiscing urna. Etiam at tempor turpis. Integer congue lectus a laoreet tempor. Nam ante eros, fringilla bibendum ornare nec, ullamcorper non orci.</p>
+				</div>
+			</article>
+		</div>
+	</div> <!-- end container for main content -->
+
 	<script src="js/jquery-2.1.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.bxslider-rahisified.js"></script>
