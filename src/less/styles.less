@@ -15,6 +15,10 @@
 }
 
 // <===========HEADER=============>
+body {
+	background-image: @background-pic;
+	background-repeat: repeat;
+}
 
 // Top titlebar styling
 .titlebar {
@@ -47,7 +51,7 @@
 }
 
 .main-title {
-	.make-row();
+	//.make-row();
 	.make-xs-column(12);
 	background-color: @primaryFaded;
 	border-radius: 10px 10px 0 0;
@@ -66,8 +70,8 @@
 // Navigation
 
 nav {
-	.make-row();
-	.make-xs-column(12);
+	//.make-row();
+	/*.make-xs-column(12);*/
 //	border: 1px solid red;
 	margin-top: 10px;
 	margin-bottom: 10px;
@@ -91,26 +95,37 @@ nav {
 
 
 // <============BODY==============>
-body {
-	background-image: @background-pic;
-	background-repeat: repeat;
-}
 
 .main-content {
-/*	.make-row();*/
-/*	.make-xs-column(12);*/
-	margin-left: -15px;
+	//.container();
+	//.make-row();
+	.make-xs-column(12);
 	.bxslider {
 		margin: 0;
 		padding: 0;
 		width: 100%;
 	}
-/*	.make-row();
-	.make-xs-column(12);*/
+	//.make-row();
+	//.make-xs-column(12);
 	.home {
 		background-color: @primaryFaded;
 		padding: 10px;
 	}
+	margin-bottom: 15px;
 }
 
 // <============FOOTER=============>
+
+footer {
+	.make-row();
+	.navbar;
+	.navbar-inverse;
+	background-color: @primary;
+	height: 200px;
+	.left-footer {
+		.make-xs-column(6);
+	}
+	.right-footer {
+		.make-xs-column(6);
+	}
+}
