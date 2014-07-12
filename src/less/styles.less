@@ -24,6 +24,7 @@ body {
 	.navbar;
 	.navbar-inverse;
 	background-color: @primary;
+	border-radius: 0;
 	.bar-wrapper{
 		.container();
 		.bar-layout {
@@ -120,28 +121,52 @@ footer {
 	.navbar;
 	.navbar-inverse;
 	background-color: @primary;
-	height: 200px;
+	padding-bottom: 20px;
+	border-radius: 0;
 	.bar-wrapper {
 		.container();
 		.bar-layout {
 			.make-row();
 			color: @primaryLight;
 			.left-footer {
-				.make-xs-column(6);
+				.make-xs-column(12);
+				.make-sm-column(5);
 				h4 {
-
+					@media only screen and (max-width : @screen-xs) {
+						text-align: center;
+					}
+				}
+				a {
+					.btn;
+					color: @primaryLight;
+					border-radius: 0;
+					padding-left: 0;
+					&:hover {
+						background-color: @primaryLight;
+						color: @primary;
+						font-weight: bold;
+					}
+					@media only screen and (max-width : @screen-xs) {
+						display: block;
+						text-align: left;
+					}
 				}
 				.social {
 					.fa;
-					.fa-lg;
-					&:hover {
-						color: primaryFaded;
-					}
+					.fa-2x;
+					.fa-fw;
 				}
 			}
 			.right-footer {
-				.make-xs-column(6);
+				.make-xs-column(12);
+				.make-sm-column(4);
+				border: 1px solid @cornerLight;
 			}
+		}
+		.copyright {
+			.make-row();
+			color: @primaryLight;
+			text-align: center;
 		}
 	}
 }
