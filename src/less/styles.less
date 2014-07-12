@@ -1,6 +1,5 @@
 @import "bootstrap/bootstrap.less";
 @import "font-awesome/font-awesome.less";
-
 @import "variables.less";
 @import "mixins.less";
 
@@ -22,7 +21,6 @@ body {
 
 // Top titlebar styling
 .titlebar {
-	.make-row();
 	.navbar;
 	.navbar-inverse;
 	background-color: @primary;
@@ -119,15 +117,31 @@ nav {
 // <============FOOTER=============>
 
 footer {
-	.make-row();
 	.navbar;
 	.navbar-inverse;
 	background-color: @primary;
 	height: 200px;
-	.left-footer {
-		.make-xs-column(6);
-	}
-	.right-footer {
-		.make-xs-column(6);
+	.bar-wrapper {
+		.container();
+		.bar-layout {
+			.make-row();
+			color: @primaryLight;
+			.left-footer {
+				.make-xs-column(6);
+				h4 {
+
+				}
+				.social {
+					.fa;
+					.fa-lg;
+					&:hover {
+						color: primaryFaded;
+					}
+				}
+			}
+			.right-footer {
+				.make-xs-column(6);
+			}
+		}
 	}
 }
