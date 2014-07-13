@@ -7367,9 +7367,9 @@ nav .top-nav li a:hover {
   border-radius: 0;
 }
 .main-content {
+  margin-bottom: 15px;
   margin-left: -15px;
   margin-right: -15px;
-  margin-bottom: 15px;
 }
 .main-content .bxslider {
   margin: 0;
@@ -7385,6 +7385,39 @@ nav .top-nav li a:hover {
   padding-right: 15px;
   background-color: #dba270;
   padding: 15px;
+}
+.main-content .sidebar {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #66b8ff;
+  color: #483728;
+}
+@media (min-width: 768px) {
+  .main-content .sidebar {
+    float: left;
+    width: 33.33333333%;
+  }
+}
+.main-content .about {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #dba270;
+  padding: 15px;
+}
+@media (min-width: 768px) {
+  .main-content .about {
+    margin-left: 8.33333333%;
+  }
+}
+@media (min-width: 768px) {
+  .main-content .about {
+    float: left;
+    width: 58.33333333%;
+  }
 }
 footer {
   position: relative;

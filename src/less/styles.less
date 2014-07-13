@@ -102,6 +102,7 @@ nav {
 // <============BODY==============>
 
 .main-content {
+	margin-bottom: 15px;
 	.make-row();
 	.bxslider {
 		margin: 0;
@@ -113,7 +114,17 @@ nav {
 		background-color: @primaryFaded;
 		padding: 15px;
 	}
-	margin-bottom: 15px;
+	.sidebar {
+		.make-sm-column(4);
+		background-color: @variantLight;
+		color: @primary;
+	}
+	.about {
+		.make-sm-column-offset(1);
+		.make-sm-column(7);
+		background-color: @primaryFaded;
+		padding: 15px;
+	}
 }
 
 // <============FOOTER=============>
