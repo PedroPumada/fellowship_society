@@ -7393,12 +7393,16 @@ nav .top-nav li a:hover {
   padding-right: 15px;
   background-color: #66b8ff;
   color: #483728;
+  border-radius: 20px;
 }
 @media (min-width: 768px) {
   .main-content .sidebar {
     float: left;
     width: 33.33333333%;
   }
+}
+.main-content .sidebar ul > li:hover {
+  color: #ffad66;
 }
 .main-content .about {
   position: relative;
