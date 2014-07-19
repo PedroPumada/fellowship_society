@@ -54,8 +54,13 @@ body {
 				.back-button {
 					.btn;
 					.btn-danger;
+					.fa;
 					margin-top: 5px;
 					margin-right: -15px;
+					padding-top: 8px;
+					padding-bottom: 8px;
+					padding-left: 10px;
+					padding-right: 10px;
 					border: 0;
 					border-radius: 0;
 					float: right;
@@ -125,9 +130,9 @@ nav {
 	}
 	.sidebar {
 		.make-sm-column(4);
-		background-color: @variantLight;
+		background-color: @variantFaded;
 		color: @primary;
-		border-radius: 20px;
+		border-radius: 0px;
 		ul > li{
 			&:hover {
 				color: @primaryLight;
@@ -154,11 +159,10 @@ nav {
 		.make-sm-column(8);
 		.make-md-column-offset(3);
 		.make-md-column(6);
-		.make-lg-column-offset(4);
-		.make-lg-column(4);
 		.panel;
 		.panel-default;
 		background-color: @primaryFaded;
+		margin-top: 100px;
 		.heading {
 			.panel-heading;
 			background-color: @primaryFaded;
@@ -208,46 +212,47 @@ footer {
 	background-color: @primary;
 	padding-bottom: 20px;
 	border-radius: 0;
+	margin-bottom: 0px;
 	.bar-wrapper {
 		.container();
 		.bar-layout {
 			.make-row();
 			color: @primaryLight;
-			.left-footer {
+			.main-footer {
 				.make-xs-column(12);
-				.make-sm-column(6);
 				h4 {
-					@media only screen and (max-width : @screen-xs) {
-						text-align: center;
-					}
+					display: inline-block;
 				}
 				a {
 					.btn;
 					color: @primaryLight;
 					border-radius: 0;
-					padding-left: 0;
-					display: block;
-					text-align: left;
-					.social {
-						.fa;
-						.fa-2x;
-						.fa-fw;
-					}
+					//padding-left: 0;
+					display: inline-block;
+					float: right;
+					// display: block;
+					// text-align: left;
 					&:hover {
 						background-color: @primaryLight;
 						color: @primary;
 						font-weight: bold;
 					}
-					@media only screen and (max-width : @screen-xs) {
-						display: block;
-						text-align: left;
-					}
+				}
+				.social {
+					.fa;
+					.fa-2x;
+					.fa-fw;
 				}
 			}
-			.right-footer {
-				.make-xs-column(12);
-				.make-sm-column(6);
-			}
+			// .left-footer {
+			// 	.make-xs-column(12);
+			// 	.make-sm-column(6);
+
+			// }
+			// .right-footer {
+			// 	.make-xs-column(12);
+			// 	.make-sm-column(6);
+			// }
 		}
 		.copyright {
 			.make-row();
